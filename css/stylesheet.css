@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+header {
+    background-color: #fff;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    
+}
+
+.logo {
+    max-width: 100px; /* Ajuste conforme necessário */
+    max-height: 150px; /* Ajuste conforme necessário */
+    border-radius: 10px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 70%;
+    margin-top: 20px ;
+    margin-bottom: 60px;
+    max-width: 600px; /* Ajuste conforme necessário */
+}
+
+/* Restante do seu CSS permanece inalterado */
+
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.clear-button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.clear-button:hover {
+    background-color: #ff5547;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    color: #000000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

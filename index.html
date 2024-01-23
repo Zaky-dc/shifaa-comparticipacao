@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Shifaa Portal</title>
+
+</head>
+<body>
+    <header>
+        <img src="image/shifaa.jpg" alt="Logo da Calculadora de Comparticipação" class="logo">
+        <h2>Calculadora de Comparticipação</h2>
+    </header>
+
+    <div class="container">
+       
+        <label for="valorFatura">Valor da Fatura:</label>
+        <input type="text" id="valorFatura" placeholder="Insira o valor da fatura do Shifaa">
+
+        <label for="valorCliente">Insira o valor do talão de eligibilidade:</label>
+        <input type="text" id="valorCliente" placeholder="Insira o valor pago pelo cliente">
+
+        <button onclick="calcularTaxa()">Calcular</button>
+        <button id="resetButton" class="clear-button" onclick="limparCampos()" style="display: none;">Limpar</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Todos os direitos reservados. Programa desenvolvido por Zakir Magide.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
