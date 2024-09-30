@@ -1,6 +1,7 @@
 var calculoRealizado = false; // Adicionado para rastrear se o cálculo foi feito
 
 function calcularTaxa() {
+    event.preventDefault();
     // Obter os valores inseridos pelo usuário
     var valorFatura = parseFloat(document.getElementById('valorFatura').value);
     var valorCliente = parseFloat(document.getElementById('valorCliente').value);
@@ -31,6 +32,7 @@ function calcularTaxa() {
 }
 
 function limparCampos() {
+    event.preventDefault();
     // Obter os valores inseridos pelo usuário
     var valorFatura = document.getElementById('valorFatura').value;
     var valorCliente = document.getElementById('valorCliente').value;
