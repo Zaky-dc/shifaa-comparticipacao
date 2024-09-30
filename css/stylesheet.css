@@ -1,4 +1,5 @@
 body {
+    /*
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    */
 }
 
 
@@ -25,6 +27,7 @@ header {
 }
 
 .container {
+    /*
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -33,7 +36,8 @@ header {
     width: 70%;
     margin-top: 20px ;
     margin-bottom: 60px;
-    max-width: 600px; /* Ajuste conforme necessário */
+    max-width: 600px;  Ajuste conforme necessário 
+    */
 }
 
 /* Restante do seu CSS permanece inalterado */
@@ -86,7 +90,24 @@ button:hover {
     background-color: #ff5547;
 }
 
+.form-signin {
+    max-width: 330px;
+    padding: 1rem;
+}
+
+.mb-auto {
+    margin-bottom: auto !important;
+}
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+.text-center {
+    text-align: center !important;
+}
+
 footer {
+    /*
     margin-top: 20px;
     text-align: center;
     padding: 10px;
@@ -95,4 +116,5 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    */
 }
