@@ -1,5 +1,24 @@
 var calculoRealizado = false; // Adicionado para rastrear se o cálculo foi feito
 
+
+//alertas
+
+function mostrarAlertas(message, className){
+
+    const div = document.createElement("div");
+    
+    div.className = `alert alert-${className} mt-5`;
+    div.appendChild(document.createTextNode(message));
+    const container= document.querySelector(".container");
+    const main = document.querySelector(".form-signin");
+    container.insertBefore(div,main);
+    
+    setTimeout(()=>document.querySelector(".alert").remove(),3000);
+
+    
+    }
+    
+
 function calcularTaxa() {
     event.preventDefault();
     // Obter os valores inseridos pelo usuário
@@ -8,13 +27,13 @@ function calcularTaxa() {
 
     // Verificar se os valores são válidos
     if (isNaN(valorFatura) || isNaN(valorCliente)) {
-        alert('Por favor, insira valores válidos.');
-        return;
+       mostrarAlertas("Por favor, preencha todos os campos","warning")
+       return;
     }
 
     // Verificar se os campos estão vazios
     if (valorFatura === 0 || valorCliente === 0) {
-        alert('Por favor, preencha todos os campos.');
+        mostrarAlertas("Introduza valores validos","warning")
         return;
     }
 
@@ -60,3 +79,4 @@ function atualizarBotoes() {
     // Atualizar a visibilidade do botão com base no estado de cálculo realizado
     resetButton.style.display = calculoRealizado ? 'block' : 'none';
 }
+
