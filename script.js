@@ -80,3 +80,34 @@ function atualizarBotoes() {
     resetButton.style.display = calculoRealizado ? 'block' : 'none';
 }
 
+function calcularTaxaMediplus() {
+    event.preventDefault();
+    // Obter os valores inseridos pelo usuário
+    var valorFatura = parseFloat(document.getElementById('valorFatura').value);
+    var valorCliente = parseFloat(document.getElementById('valorCliente').value);
+    var valorreal = valorFatura-valorCliente;
+
+    // Verificar se os valores são válidos
+    if (isNaN(valorFatura) || isNaN(valorCliente)) {
+       mostrarAlertas("Por favor, preencha todos os campos","warning")
+       return;
+    }
+
+    // Verificar se os campos estão vazios
+    if (valorFatura === 0 || valorCliente === 0) {
+        mostrarAlertas("Introduza valores validos","warning")
+        return;
+    }
+
+    // Calcular a taxa de comparticipação
+    var taxaCliente = (valorreal / valorFatura) * 100;
+    var taxaSeguradora = 100 - taxaCliente;
+
+    // Exibir o resultado
+    var resultadoElement = document.getElementById('resultado');
+    resultadoElement.innerHTML = `Taxa Cliente: ${taxaCliente.toFixed(2)}%<br>Taxa Seguradora: ${taxaSeguradora.toFixed(2)}%`;
+
+    // Ativar o botão de reset
+    calculoRealizado = true;
+    atualizarBotoes();
+}
